@@ -17,3 +17,7 @@ def clamp(value: int, low: int, high: int) -> int:
 
 def slugify(value: str) -> str:
     return value.strip().lower().replace(" ", "-")
+
+
+def new_helper_function(value: int) -> int:
+    return value * 2
