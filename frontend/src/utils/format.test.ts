@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { formatCents, truncate } from './format';
+import { capitalize, formatCents, truncate } from './format';
 
 test('formatCents formats whole dollars', () => {
   assert.equal(formatCents(1000), '$10.00');
@@ -16,4 +16,12 @@ test('truncate leaves short strings alone', () => {
 
 test('truncate cuts long strings and adds an ellipsis', () => {
   assert.equal(truncate('hello world', 5), 'hello...');
+});
+
+test('capitalize uppercases the first letter', () => {
+  assert.equal(capitalize('hello'), 'Hello');
+});
+
+test('capitalize handles an empty string', () => {
+  assert.equal(capitalize(''), '');
 });
