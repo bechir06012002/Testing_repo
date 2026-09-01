@@ -2,10 +2,14 @@
   "name": "testing-repo-frontend",
   "private": true,
   "version": "0.0.1",
+  "scripts": {
+    "test": "tsc && node --test dist/utils/*.test.js"
+  },
   "dependencies": {
     "react": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.5.0"
+    "typescript": "^5.5.0",
+    "@types/node": "^20.14.0"
   }
 }
