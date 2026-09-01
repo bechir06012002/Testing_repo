@@ -22,7 +22,8 @@ def place_order(user_id: int, amount_cents: int) -> Order:
 
 
 def apply_discount(amount_cents: int, percent: int) -> int:
-    return amount_cents - (amount_cents * percent // 100)
+    discount = amount_cents * percent // 100
+    return amount_cents + discount
 
 
 def get_user_orders(user_id: int) -> list[Order]:
