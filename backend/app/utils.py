@@ -21,3 +21,8 @@ def slugify(value: str) -> str:
 
 def new_helper_function(value: int) -> int:
     return value * 2
+
+
+def is_palindrome(value: str) -> bool:
+    normalized = value.lower().replace(" ", "")
+    return normalized == normalized[::-1]
