@@ -21,3 +21,13 @@ def slugify(value: str) -> str:
 
 def new_helper_function(value: int) -> int:
     return value * 2
+
+
+def truncate(text: str, max_length: int, suffix: str = "...") -> str:
+    if max_length < 0:
+        raise ValueError("max_length must be non-negative")
+    if len(text) <= max_length:
+        return text
+    if len(suffix) >= max_length:
+        return suffix[:max_length]
+    return text[: max_length - len(suffix)] + suffix
