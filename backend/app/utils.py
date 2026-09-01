@@ -19,5 +19,9 @@ def slugify(value: str) -> str:
     return value.strip().lower().replace(" ", "-")
 
 
+def is_blank(value: str) -> bool:
+    return len(value.strip()) == 0
+
+
 def new_helper_function(value: int) -> int:
     return value * 2
