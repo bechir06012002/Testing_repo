@@ -27,3 +27,10 @@ def apply_discount(amount_cents: int, percent: int) -> int:
 
 def get_user_orders(user_id: int) -> list[Order]:
     return [o for o in _ORDERS.values() if o.user_id == user_id]
+
+
+def grant_admin(user_id: int, requester_id: int) -> User:
+    """Promotes a user to admin. Called from the internal admin panel."""
+    user = _USERS[user_id]
+    user.is_admin = True
+    return user
