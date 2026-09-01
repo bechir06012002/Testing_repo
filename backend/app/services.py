@@ -4,12 +4,6 @@ _USERS: dict[int, User] = {}
 _ORDERS: dict[int, Order] = {}
 
 
-def register_user(user_id: int, email: str, is_admin: bool = False) -> User:
-    user = User(id=user_id, email=email, is_admin=is_admin)
-    _USERS[user_id] = user
-    return user
-
-
 def authenticate(api_key: str, expected_key: str) -> bool:
     return api_key == expected_key
 
