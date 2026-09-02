@@ -26,3 +26,10 @@ def new_helper_function(value: int) -> int:
 def is_palindrome(value: str) -> bool:
     normalized = value.lower().replace(" ", "")
     return normalized == normalized[::-1]
+
+
+def truncate(value: str, max_length: int) -> str:
+    """Truncate a string to at most max_length characters, appending '...' if truncated."""
+    if len(value) <= max_length:
+        return value
+    return value[:max_length] + "..."
